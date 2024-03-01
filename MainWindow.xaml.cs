@@ -5,6 +5,7 @@
  * 
  * Code related to Newtonsoft.Json and InTheHand.BluetoothLE is licensed under their respective licenses.
  */
+
 using InTheHand.Bluetooth;
 using iPrintUtility.Printer;
 using Microsoft.Web.WebView2.Core;
@@ -47,7 +48,7 @@ namespace iPrintUtility
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            BottomLabel.Content = "iPrint Utility  v" + version.Major + "." + version.Minor + " © " + DateTime.Now.Year + " - Mywk.Net";
+            BottomLabel.Content = "jPrint Utility - version " + version.Major + "." + version.Minor + " ©" + DateTime.Now.Year;
 
             if (CheckForUpdates())
                 UpdateLabel.Visibility = Visibility.Visible;
@@ -147,26 +148,26 @@ namespace iPrintUtility
         /// </summary>
         private bool CheckForUpdates()
         {
-            try
-            {
-                var web = new System.Net.WebClient();
-                var url = "https://Mywk.Net/software.php?assembly=" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                var responseString = web.DownloadString(url);
+            //try
+            //{
+            //    var web = new System.Net.WebClient();
+            //    var url = "https://Mywk.Net/software.php?assembly=" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            //    var responseString = web.DownloadString(url);
 
-                foreach (var str in responseString.Split('\n'))
-                {
-                    if (str.Contains("Version"))
-                    {
-                        var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-                        if (version.Major + "." + version.Minor != str.Split('=')[1])
-                            return true;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            //    foreach (var str in responseString.Split('\n'))
+            //    {
+            //        if (str.Contains("Version"))
+            //        {
+            //            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            //            if (version.Major + "." + version.Minor != str.Split('=')[1])
+            //                return true;
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    return false;
+            //}
 
             return false;
         }
@@ -313,7 +314,6 @@ namespace iPrintUtility
         }
 
 
-        private string filename = "";
         private async void PrintButton_Click(object sender, RoutedEventArgs e)
         {
             if (isPrinting)
@@ -381,7 +381,7 @@ namespace iPrintUtility
             }
         }
 
-        private void SelectedDeviceOnReportProgressEvent(object? sender, EventArgs e)
+        private void SelectedDeviceOnReportProgressEvent(object sender, EventArgs e)
         {
             ProgressBar.Value++;
         }
@@ -528,7 +528,7 @@ namespace iPrintUtility
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void WebView_OnZoomFactorChanged(object? sender, EventArgs e)
+        private void WebView_OnZoomFactorChanged(object sender, EventArgs e)
         {
             WebView.ZoomFactor = 1;
         }
@@ -558,7 +558,7 @@ namespace iPrintUtility
                 FileName = targetURL,
                 UseShellExecute = true
             };
-            Process.Start(psi);
+            //Process.Start(psi);
         }
 
         private void UpdateLabel_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

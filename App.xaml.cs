@@ -84,7 +84,7 @@ namespace iPrintUtility
                     Application.Current.Resources.MergedDictionaries.Add(darkTheme);
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         protected override void OnExit(ExitEventArgs e)

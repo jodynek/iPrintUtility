@@ -309,7 +309,7 @@ namespace iPrintUtility.Printer
                                             writeCharacteristic = item;
                                             break;
                                         }
-                                        catch (Exception e)
+                                        catch (Exception)
                                         {
                                             int x = 0;
                                             x++;

@@ -16,15 +16,15 @@
     </WindowChrome.WindowChrome>
     <Border>
         <Grid>
-		    <Grid.RowDefinitions>
+            <Grid.RowDefinitions>
                 <RowDefinition Height="30" />
                 <RowDefinition Height="*" />
-			    <RowDefinition Height="40" />
-		    </Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
 
             <!-- A bit QND :) -->
             <Grid Name="WindowTitleGrid" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="#30274C" Height="30" >
-                <Label Content="iPrint Utility" Foreground="White" />
+                <Label Content="jPrint Utility" Foreground="White" />
                 <Grid>
                     <Grid.Resources>
                         <Style TargetType="Button">

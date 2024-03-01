@@ -7,7 +7,7 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>iPrintUtility</AssemblyName>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>print.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -23,11 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="print.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="InTheHand.BluetoothLE" Version="4.0.20" />
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.864.35" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
-    <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2365.46" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.2" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
